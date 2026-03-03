@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📊 Administração</h1>
+        <a href="#" onclick="logout()" class="logout-btn">Sair</a>
+    </header>
+
+    <div class="container">
+        <!-- Dashboard Rápido -->
+        <div class="card" style="background:var(--dark); color:white">
+            <h3>Vendas Hoje</h3>
+            <h1 id="today-sales">R$ 0,00</h1>
+            <p><span id="sales-count">0</span> vendas finalizadas</p>
+        </div>
+
+        <!-- Gerenciar Produtos -->
+        <h3>Gerenciar Produtos</h3>
+        <button class="btn btn-primary" onclick="addProduct()">+ Novo Produto</button>
+        <div class="card">
+            <div id="adm-product-list"></div>
+        </div>
+
+        <!-- Configurações -->
+        <h3>Configurações do Sistema</h3>
+        <div class="card">
+            <button class="btn btn-outline" style="border-color:red; color:red" onclick="resetSystem()">⚠️ RESETAR SISTEMA (ZERAR TUDO)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

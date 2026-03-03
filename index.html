@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-screen">
+        <div class="login-box">
+            <div class="logo-area">
+                <span>🍽️ FOOD APP</span>
+                <p>Gerenciamento Inteligente</p>
+            </div>
+            <form id="login-form">
+                <label>Selecione sua função:</label>
+                <select id="role">
+                    <option value="adm">Administrador</option>
+                    <option value="garcom">Garçom</option>
+                    <option value="cozinha">Cozinha</option>
+                    <option value="caixa">Caixa</option>
+                </select>
+                
+                <label>Senha de acesso:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+                
+                <button type="submit" class="btn btn-primary">ENTRAR NO SISTEMA</button>
+            </form>
+            <p style="text-align:center; font-size:12px; color:#999; margin-top:20px">
+                Senhas padrão: Admin(1234), Garçom(1111), Cozinha(2222), Caixa(3333)
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

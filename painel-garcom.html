@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Garçom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>👨‍🍳 Garçom</h1>
+        <a href="#" onclick="logout()" class="logout-btn">Sair</a>
+    </header>
+
+    <div class="container" id="main-view">
+        <h2>Selecione a Mesa</h2>
+        <div class="mesas-grid" id="tables-container">
+            <!-- Mesas via JS -->
+        </div>
+    </div>
+
+    <!-- Modal Novo Pedido -->
+    <div id="order-modal" class="container hidden" style="position:fixed; top:0; left:0; width:100%; height:100%; background:white; z-index:200; overflow-y:auto">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px">
+            <h2 id="modal-title">Novo Pedido</h2>
+            <button class="btn-outline" style="width:auto; padding:5px 10px" id="close-modal">Voltar</button>
+        </div>
+
+        <h3>Cardápio</h3>
+        <div id="product-list" style="margin-bottom:20px; max-height:300px; overflow-y:scroll"></div>
+
+        <div class="card" style="background:#f9f9f9">
+            <h3>Resumo do Pedido</h3>
+            <div id="cart-list"></div>
+            <hr style="margin:10px 0">
+            <div style="display:flex; justify-content:space-between; font-weight:bold">
+                <span>Total:</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+        </div>
+
+        <textarea id="order-obs" placeholder="Observações para a cozinha (Ex: Sem cebola)"></textarea>
+
+        <button id="send-order" class="btn btn-primary">ENVIAR PARA COZINHA</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
